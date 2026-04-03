@@ -1,0 +1,95 @@
+/* ===== Body ===== */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #e6f0ff; /* biru muda */
+}
+
+/* ===== Judul ===== */
+h2 {
+    color: #0044cc; /* biru tua */
+    border-bottom: 3px solid #0044cc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== Form Buku ===== */
+/* Foto Buku */
+.buku-foto {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid #0044cc;
+
+    max-width: 200px;   /* lebar maksimal */
+    height: auto;       /* tinggi mengikuti proporsi */
+}
+
+
+/* ===== Input & Select ===== */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border-radius: 4px;
+    border: 1px solid #0044cc; /* garis biru */
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ===== Button ===== */
+button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-submit {
+    background: #0044cc;
+    color: #fff;
+    border: none;
+}
+
+.btn-submit:hover {
+    background: #007bff;
+}
+
+.btn-delete {
+    background: red;
+    color: #fff;
+    border: none;
+}
+
+/* ===== Foto Buku ===== */
+.buku-foto {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid #0044cc;
+}
+
+/* ===== Garis Horizontal ===== */
+hr {
+    border: 0;
+    border-top: 2px solid #0044cc;
+    margin: 20px 0;
+}
+
+/* ===== Label ===== */
+label {
+    font-weight: bold;
+    color: #0044cc;
+}
+
+@media (max-width: 600px) {
+    .buku-foto {
+        max-width: 100%;  /* menyesuaikan lebar layar */
+    }
+}

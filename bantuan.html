@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Bantuan GAPRINT STORE</title>
+    <link rel="stylesheet" href="css/bantuan.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <div class="header">Pusat Bantuan GAPRINT STORE</div>
+
+    <div class="container">
+
+        <!-- MENU KIRI -->
+        <div class="sidebar">
+            <h3>Kategori Bantuan</h3>
+
+            <ul>
+                <li class="active" onclick="showFAQ('akun')">Akun & Keamanan</li>
+                <li onclick="showFAQ('pesanan')">Pesanan</li>
+                <li onclick="showFAQ('pembayaran')">Pembayaran</li>
+                <li onclick="showFAQ('pengiriman')">Pengiriman</li>
+            </ul>
+        </div>
+
+        <!-- KONTEN KANAN -->
+        <div class="content">
+
+            <input type="text" class="search-box" placeholder="Cari pertanyaan...">
+
+            <div id="faq-akun" class="faq-list">
+                <h3>Akun & Keamanan</h3>
+
+                <div class="faq-item">
+                    <div class="faq-item-title">Bagaimana cara membuat akun?</div>
+                    <div class="faq-item-body">Klik Registrasi, isi data diri, lalu verifikasi email.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item-title">Saya lupa kata sandi</div>
+                    <div class="faq-item-body">Gunakan menu Lupa Password pada halaman login.</div>
+                </div>
+            </div>
+
+            <div id="faq-pesanan" class="faq-list" style="display:none;">
+                <h3>Pesanan</h3>
+
+                <div class="faq-item">
+                    <div class="faq-item-title">Cara melihat status pesanan</div>
+                    <div class="faq-item-body">Masuk ke menu Pesanan Saya pada akun Anda.</div>
+                </div>
+            </div>
+
+            <div id="faq-pembayaran" class="faq-list" style="display:none;">
+                <h3>Pembayaran</h3>
+
+                <div class="faq-item">
+                    <div class="faq-item-title">Metode pembayaran yang tersedia</div>
+                    <div class="faq-item-body">Transfer bank, e-wallet, dan COD.</div>
+                </div>
+            </div>
+
+            <div id="faq-pengiriman" class="faq-list" style="display:none;">
+                <h3>Pengiriman</h3>
+
+                <div class="faq-item">
+                    <div class="faq-item-title">Berapa lama pengiriman?</div>
+                    <div class="faq-item-body">Estimasi 2–5 hari kerja tergantung lokasi.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function showFAQ(menu) {
+            document.querySelectorAll(".faq-list").forEach(x => x.style.display = "none");
+            document.getElementById("faq-" + menu).style.display = "block";
+
+            document.querySelectorAll(".sidebar li").forEach(x => x.classList.remove("active"));
+            event.target.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f4f7fb;
+    padding: 20px;
+}
+
+/* JUDUL */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+/* WRAPPER SCROLL */
+.table-wrapper {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* TABLE */
+.payment-table {
+    border-collapse: collapse;
+    min-width: 1600px; /* bikin horizontal */
+    width: 100%;
+}
+
+/* HEADER */
+.payment-table th {
+    background: #0056b3;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* CELL */
+.payment-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+    font-size: 13px;
+    background: #fafafa;
+}
+
+/* TRACKING COLUMN */
+.payment-table td:nth-child(9) {
+    min-width: 280px;
+}
+
+/* TRACKING FORM */
+.payment-table td:nth-child(9) form {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.payment-table td:nth-child(9) input[type="text"] {
+    flex: 1;
+    padding: 6px;
+    font-size: 12px;
+}
+
+.payment-table td:nth-child(9) button {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* BUTTON */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background: #0056b3;
+}
+
+/* SELECT */
+select {
+    padding: 6px;
+    font-size: 13px;
+}
+
+/* DOWNLOAD AREA (SEMBUNYI) */
+#areaDownload {
+    position: absolute;
+    left: -9999px;
+    background: white;
+    padding: 20px;
+}

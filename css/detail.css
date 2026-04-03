@@ -1,0 +1,120 @@
+/* ---------- GLOBAL ---------- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e3f2fd; /* biru muda lembut */
+    color: #1a1a1a;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ---------- GAMBAR BUKU ---------- */
+.gambar-buku img {
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    max-width: 250px;    /* batasi lebar maksimum */
+    width: 100%;          /* agar responsif di layar kecil */
+    height: auto;         /* proporsional */
+    object-fit: contain;  /* agar tidak terpotong */
+}
+
+/* ---------- DETAIL BUKU ---------- */
+.detail-buku {
+    flex: 1;
+    min-width: 250px;
+}
+
+h2 {
+    color: #0d47a1; /* biru tua */
+    margin-bottom: 15px;
+}
+
+.info-buku p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.info-buku b {
+    color: #1565c0; /* biru medium */
+}
+
+.stok {
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+/* ---------- RINGKASAN ---------- */
+.ringkasan {
+    max-height: 120px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-left: 4px solid #1565c0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* ---------- STEP PER JUAL ---------- */
+.stepper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stepper input[type="number"] {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #1565c0;
+    border-radius: 5px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-submit, .btn-beli {
+    padding: 10px 20px;
+    background-color: #1565c0; /* biru utama */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover, .btn-beli:hover {
+    background-color: #75859d;
+}
+
+.btn-beli {
+    margin-top: 10px;
+}
+
+/* ---------- HORIZONTAL RULE ---------- */
+hr {
+    border: 0;
+    border-top: 1px solid #90caf9;
+    margin: 20px 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .gambar-buku img {
+        max-width: 100%;
+    }
+}

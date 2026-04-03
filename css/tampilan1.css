@@ -1,0 +1,1186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+/* ================= TOP BAR ================= */
+
+.topbar {
+    background: #4668ce;
+    color: white;
+    font-size: 12px;
+}
+
+.topbar .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+}
+
+.header .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 16x;
+    padding: 14px 0;
+        justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4668ce;
+}
+
+
+/* bungkus logo + teks */
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* teks berada di tengah */
+}
+
+
+/* gambar logo */
+
+.logo-img {
+    height: 70px;
+    object-fit: contain;
+}
+
+
+/* tulisan di bawah logo */
+
+.logo-text {
+    font-size: 13px;
+    margin-top: 2px;
+    font-weight: bold;
+    color: #4668ce;
+    /* biru agar serasi */
+}
+
+.search-wrapper {
+    position: relative;
+    width: 60%;
+    flex: 1;
+    margin-left: 30px;
+    /* isi ruang tengah */
+}
+
+
+/* input search */
+
+.search-wrapper input {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+}
+
+
+/* ikon pencarian berada DI DALAM kotak */
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* ikon notifikasi */
+
+.notif-icon {
+    margin-left: 10px;
+    font-size: 22px;
+    text-decoration: none;
+    /* margin-right: 5px; */
+}
+
+
+/* ikon kanan */
+
+.notif-icon,
+.cart-icon {
+    font-size: 24px;
+    /* margin-left: 5px; */
+    text-decoration: none;
+}
+
+.notif-icon,
+.cart-iconn {
+    font-size: 24px;
+    /* margin-left: 5px; */
+    text-decoration: none;
+}
+
+.notif-icon,
+.account-icon {
+    font-size: 24px;
+    /* margin-left: 5px; */
+    text-decoration: none;
+}
+
+
+/* SEARCH BOX */
+
+.search-box {
+    flex: 1;
+    display: flex;
+    /* >>> penting */
+    align-items: center;
+    /* sejajarkan ke tengah secara vertikal */
+    gap: 10px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+    /* ruang untuk ikon kanan */
+    border: 2px solid #4668ce;
+    border-radius: 3px;
+    outline: none;
+}
+
+
+/* ICONS RIGHT */
+
+.header a {
+    color: #ffffff;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* panel filter */
+
+.filter-panel {
+    width: 300px;
+    height: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    z-index: 999;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, .2);
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.filter-group {
+    margin-top: 10px;
+}
+
+
+/* ================= SLIDER ================= */
+
+.slider {
+    width: 1200px;
+    margin: 16px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: 0.4s;
+}
+
+.slides img {
+    width: 1200px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* hanya untuk gambar slide ke-2 */
+
+.slides img:nth-child(2) {
+    margin-left: 25%;
+    /* pusatkan gambar */
+    width: 1200px;
+    height: 280px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+}
+
+.dots span {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: .5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots .active {
+    opacity: 1;
+}
+
+
+/* ================= CATEGORY ================= */
+
+.category {
+    width: 1200px;
+    margin: 10px auto;
+    background: white;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cat-item {
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.cat-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* =================  FLASH SALE  ================= */
+
+.product-section {
+    width: 1200px;
+    margin: 10px auto 40px auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-card {
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 21px;
+    margin-right: 5px;
+    width: 190px;
+    border: 1px solid #eee;
+}
+
+.product-card2 {
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 190px;
+    border: 1px solid #eee;
+}
+
+.product-card3 {
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 1185px;
+    border: 2px solid #ffffff;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card2 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card3 img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 8px;
+}
+
+.product-info2 {
+    padding: 8px;
+}
+
+.product-info3 {
+    padding: 8px;
+}
+
+.product-title {
+    font-size: 12px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.product-price {
+    color: #f53d2d;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    /* kanan–kiri */
+    align-items: center;
+}
+
+.price-row2 {
+    display: flex;
+    justify-content: space-between;
+    /* kanan–kiri */
+    align-items: center;
+}
+
+
+/* Harga di kiri */
+
+.product-price {
+    color: #f53d2d;
+    font-weight: bold;
+}
+
+
+/* Terjual di kanan */
+
+.product-sold {
+    font-size: 11px;
+    color: #0a0000;
+    text-align: right;
+}
+
+
+/* Warna  Gambar Nofikasi dan Lonceng*/
+
+.card-blue {
+    color: #4668ce;
+}
+
+
+/* Kotak khusus Flash Sale */
+
+.flash-sale-box {
+    background: #fff7f6;
+    border: 2px solid #4668ce;
+    border-radius: 10px;
+    margin-top: 50px;
+    /* padding: 10px; */
+    box-shadow: 0 3px 8px #4668ce;
+}
+
+.list-box {
+    background: #f5f7ff;
+    border: 2px solid #f5f7ff;
+    padding: 12px;
+    border-radius: 14px;
+}
+
+
+/* Judul flash sale */
+
+.flash-sale-box h3 {
+    color: #f52100;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+/* Badge kecil */
+
+.flash-sale-box h3::after {
+    content: "DISKON BESAR";
+    background: #f52100;
+    color: white;
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin-left: 8px;
+}
+
+
+/* =================  LIST PRODUCTS  ================= */
+
+.product-grid2 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+}
+
+
+/* kotak produk */
+
+.product-card,
+.product-card2 {
+    background: white;
+    border: 5px solid #4668ce;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .12);
+}
+
+
+/* gambar produk */
+
+.product-card img,
+.product-card2 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* baris harga & terjual */
+
+.price-row,
+.price-row2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* =================  LIST PRODUCTS  ================= */
+
+.account-wrapper {
+    position: relative;
+}
+
+.account-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* dropdown */
+
+.account-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+    width: 140px;
+    z-index: 99;
+}
+
+.account-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.account-menu a:hover {
+    background: #f0f2ff;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-box {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-box h3 {
+        margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.popup-box p {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    /* jarak bawah tulisan */
+    font-size: 14px;
+}
+
+
+/* jarak antar tombol */
+
+.popup-buttons {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.popup-buttons a {
+    padding: 10px 14px;
+    margin: 6px;
+    /* jarak antar tombol */
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    width: 260px;
+    z-index: 1000;
+}
+
+.btn-login {
+    background: #2b6cff;
+    color: white;
+}
+
+.btn-register {
+    background: #00b894;
+    color: white;
+}
+
+.close-btn {
+    margin-top: 10px;
+}
+
+#btnTampilkan {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    border: none;
+    background: #1E90FF;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.level-btn {
+    padding: 6px 10px;
+    margin: 4px;
+    border-radius: 6px;
+    border: 1px solid #888;
+    cursor: pointer;
+}
+
+.level-btn.active {
+    background: orange;
+    color: white;
+    border-color: orange;
+}
+
+.product-scroll-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 10px;
+    height: 290px;
+}
+
+.product-item {
+    min-width: 180px;
+    min-height: 190px;
+    background: #ffffff;
+    border: 5px solid #4668ce;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.product-item h4 {
+    font-size: 14px;
+    color: #000;
+}
+
+.product-item span {
+    font-size: 12px;
+    color: #444;
+}
+
+.product-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.floating-add {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: white;
+    background: #4668ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    z-index: 999;
+}
+
+.floating-add:hover {
+    background: #ff7a33;
+    cursor: pointer;
+}
+
+.grid-produk {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.item-produk {
+    border: 5px solid #4668ce;
+    border-radius: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+
+.item-produk img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.product-item b {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 4px;
+    color: #000;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;   /* ⬅️ memastikan tidak turun */
+    gap: 10px;
+}
+
+.cart-icon,
+.notif-icon {
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.cart-iconn,
+.notif-icon {
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+/* 
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: blue;
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+} */
+
+.popup-content {
+    max-width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.cart-item {
+    margin-bottom: 15px;
+}
+
+.cart-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.cart-card img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-title {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 5px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.cart-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.close-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* POPUP KERANJANG */
+
+.popup {
+    display: none;
+    /* default sembunyi */
+    position: fixed;
+    /* tetap stay di layar */
+    top: 60px;
+    /* jarak dari atas, sesuaikan */
+    right: 20px;
+    /* dekat ikon keranjang */
+    z-index: 999;
+    width: 350px;
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    /* scroll jika banyak item */
+    padding: 15px;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+
+/* ITEM KERANJANG */
+
+.cart-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.cart-card img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-title {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 5px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.cart-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.close-btn {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Wrapper ikon keranjang */
+
+.cart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Badge di kanan atas ikon */
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #007bff;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+
+/* Popup keranjang */
+
+.popup {
+    display: none;
+    position: fixed;
+    /* tetap stay di layar */
+    top: 60px;
+    /* jarak dari atas */
+    right: 20px;
+    /* dekat ikon keranjang */
+    z-index: 999;
+    width: 350px;
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    padding: 15px;
+}
+
+
+/* Item keranjang */
+
+.cart-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.cart-card img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-title {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 5px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.close-btn {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    /* tetap stay walau scroll */
+    top: 60px;
+    /* sesuaikan tinggi header */
+    right: 20px;
+    width: 320px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: none;
+    z-index: 9999;
+}
+
+.popup-content {
+    padding: 15px;
+}
+
+.cart-card {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.cart-card img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-title {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    padding: 0;
+}
+
+.close-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #0033cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.not-found {
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #ff4d4f;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: #fff6f6;
+}
+
+.new-badge {
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.notif-toast {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.badge{
+    background:red;
+    color:white;
+    border-radius:50%;
+    padding:2px 6px;
+    font-size:10px;
+    position:relative;
+    top:-10px;
+    right:-5px;
+}
+
+.notif-badge{
+    position:absolute;
+    top:-6px;
+    right:-8px;
+    background:#1E90FF; /* biru */
+    color:white;
+    font-size:10px;
+    padding:2px 6px;
+    border-radius:50%;
+    min-width:16px;
+    text-align:center;
+    font-weight:bold;
+}
+/* ICON CART */
+.cart-iconn {
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* POPUP NOTIF */
+#notifPopup {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 9999;
+}
+
+/* LIST ITEM NOTIF */
+#notifList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#notifList li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.filter-panel{
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background:white;
+    box-shadow:-3px 0 10px rgba(0,0,0,.2);
+    padding:15px;
+    transition:.3s;
+    display:none;
+    overflow-y:auto;
+    z-index:9999;
+}
+
+.filter-box{
+    margin-bottom:15px;
+}
+
+.btn-filter{
+    padding:8px 12px;
+    background:blue;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+
+
+.btn-login { background-color: #007bff; }
+.btn-login:hover { background-color: #0056b3; }
+
+.btn-register { background-color: #28a745; }
+.btn-register:hover { background-color: #1e7e34; }
